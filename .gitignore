@@ -3,4 +3,6 @@ data/
 .DS_Store
 *.swp
 pics/
+*.pyc
+**/__pycache__
 
