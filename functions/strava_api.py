@@ -28,7 +28,9 @@ def get_activities():
 
     if (int(datetime.datetime.utcnow().timestamp()) > data['token_expiry']):
         request_token()
-
+        with open('data/auth.json', 'r') as f:
+            data = json.load(f)
+    
     page = 1
 
     header = {'Authorization': f'Bearer {data["access_token"]}'}
