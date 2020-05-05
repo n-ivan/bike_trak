@@ -8,7 +8,10 @@ def main():
     gj.activities_to_geojson()
     dp.draw_to_png()
     dp.draw_to_png_fixed()
-    tweet.main()
-    print('Posted a tweet')
+    posted = tweet.main()
+    if posted:
+        print('Posted a tweet')
+    else:
+        print("Did not post")
 
 main()
