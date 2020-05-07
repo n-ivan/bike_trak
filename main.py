@@ -14,4 +14,5 @@ def main():
     else:
         print("Did not post")
 
-main()
+if __name__ == "__main__":
+	main()
