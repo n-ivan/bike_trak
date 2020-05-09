@@ -5,4 +5,5 @@ data/
 pics/
 *.pyc
 **/__pycache__
+venv/
 
