@@ -11,7 +11,7 @@ def draw_to_png():
     df.plot(color='black', linewidth=0.5)
     plt.axis("off")
     date = datetime.datetime.now().date().strftime("%Y-%m-%d")
-    plt.savefig(f'pics/{date}.png',format='PNG', dpi=500)
+    plt.savefig(f'pics/{date}.png',format='PNG', dpi=700)
 
 def draw_to_png_fixed():
     df = gpd.read_file('data/rides.json')
@@ -20,4 +20,12 @@ def draw_to_png_fixed():
     plt.xlim(-79.61947, -79.12864)
     plt.axis("off")
     date = datetime.datetime.now().date().strftime("%Y-%m-%d")
-    plt.savefig(f"pics/{date}_fixed.png",format="PNG", dpi=500)  
+    plt.savefig(f"pics/{date}_fixed.png",format="PNG", dpi=700)  
+
+def draw_to_png_tight():
+    df = gpd.read_file('data/rides.json')
+    df.plot(color='black', linewidth=0.5)
+    plt.axis("off")
+    date = datetime.datetime.now().date().strftime("%Y-%m-%d")
+    plt.tight_layout()
+    plt.savefig(f"pics/{date}_tight.png", format='PNG', dpi=700)

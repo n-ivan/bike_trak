@@ -20,7 +20,7 @@ def main():
     if num >= stats['rides']:
         return False
     with open('data/num.txt', 'w') as f:
-        f.write(stats['rides'])
+        f.write(str(stats['rides']))
     oauth = twitter_oauth()
     api = tweepy.API(oauth)
     date = datetime.datetime.now().date().strftime("%Y-%m-%d")
